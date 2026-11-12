@@ -11,7 +11,7 @@ class $modify(XyzInstMenu, MenuLayer) {
         if (!menu) return true;
         auto spr = CCSprite::create("installer-button.png"_spr);
         if (!spr) return true;
-        spr->setScale(0.45f);
+        spr->setScale(1.55f);
         auto btn = CCMenuItemSpriteExtra::create(spr, this, menu_selector(XyzInstMenu::onXyzInstaller));
         btn->setID("open-installer"_spr);
         menu->addChild(btn);
