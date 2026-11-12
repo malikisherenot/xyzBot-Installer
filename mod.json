@@ -1,0 +1,29 @@
+{
+  "geode": "5.11.2",
+  "gd": {
+    "win": "2.2081",
+    "android": "2.2081",
+    "mac": "2.2081",
+    "ios": "2.2081"
+  },
+  "version": "v1.0.0",
+  "id": "itzmalikhere.xyzbot-installer",
+  "name": "xyzBot Installer",
+  "developer": "itzmalikhere",
+  "description": "Install xyzBot, or any previous version of it, from inside the game.",
+  "tags": [
+    "utility",
+    "enhancement"
+  ],
+  "resources": {
+    "files": [
+      "resources/*.png"
+    ]
+  },
+  "dependencies": {
+    "geode.node-ids": {
+      "version": ">=1.0.0",
+      "importance": "required"
+    }
+  }
+}
