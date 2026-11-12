@@ -1,6 +1,7 @@
 #include "Installer.hpp"
 #include "Sha256.hpp"
 #include <Geode/Geode.hpp>
+#include <Geode/loader/Dirs.hpp>
 #include <Geode/ui/MDTextArea.hpp>
 #include <Geode/ui/Popup.hpp>
 #include <Geode/ui/ScrollLayer.hpp>
@@ -59,7 +60,7 @@ class InstallerPopup : public geode::Popup {
 
     std::filesystem::path targetPath() const {
         if (auto mod = Loader::get()->getInstalledMod(MOD_ID)) return mod->getPackagePath();
-        return Loader::get()->getGeodeDir() / "mods" / (std::string(MOD_ID) + ".geode");
+        return geode::dirs::getModsDir() / (std::string(MOD_ID) + ".geode");
     }
 
     CCLabelBMFont* label(std::string const& t, float x, float y, float sc, bool left = false, ccColor3B col = {255, 255, 255}) {
